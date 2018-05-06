@@ -1,0 +1,5 @@
+<%= form_for :equilibrium, url: "equilibrium" do |form| %>
+  <p>Please Enter the array in following format - 1,2,3,4 in the given text field</p>
+  <%= form.text_field :array_string %>
+  <%= form.submit  %>
+<% end  %>
