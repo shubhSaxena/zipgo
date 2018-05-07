@@ -5,16 +5,15 @@ module EquilibriumHelper
     array = array_string.split(',').map(&:to_i)
     left_sum = 0
     array.each do |n|
-      sum = sum + n.to_i
+      sum = sum + n
     end
     
-    array.each do |i,n|
-      sum = sum - n.to_i
+    array.each do |n|
+      sum = sum - n
       if(left_sum == sum)
-        ans_array << array.index(n.to_i)
-        break
+        ans_array << array.index(n)
       end
-      left_sum = left_sum + n.to_i
+      left_sum = left_sum + n
     end
     return ans_array
   end
